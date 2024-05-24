@@ -1,6 +1,8 @@
 import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
 import LatestDestinationCard from "../components/LatestDestinationCard";
+import HeroSection from "../components/HeroSection/HeroSection";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   const { data: hotels } = useQuery("fetchQuery", () =>
@@ -12,6 +14,8 @@ const Home = () => {
 
   return (
     <div className="space-y-3">
+      <HeroSection />
+      <div className="container mx-auto"> <SearchBar /> </div>
       <h2 className="text-3xl font-bold">Latest Destinations</h2>
       <p>Most recent desinations added by our hosts</p>
       <div className="grid gap-4">
