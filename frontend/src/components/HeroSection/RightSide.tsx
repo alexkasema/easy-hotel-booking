@@ -11,7 +11,7 @@ const RightSide = (props: Props) => {
 
     const beach = hotels.filter(hotel => hotel.type === 'Beach Resort')
     return (
-        <section className="flex-1 py-10 h-full md:grid hidden gap-8 grid-cols-1">
+        <section className="flex-1 py-5 h-full md:grid hidden gap-8 grid-cols-1">
             <p className="text-2xl mb-2">Featured Apartments</p>    
             <div className='md:grid hidden gap-8 grid-cols-1'>
                 <LatestDestinationCard hotel={beach[0]} />
